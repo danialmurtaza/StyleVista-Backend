@@ -19,7 +19,10 @@ app.use(express.json());
 
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/e-commerce");
+// mongoose.connect("mongodb://localhost:27017/e-commerce");
+mongoose.connect(
+  "mongodb+srv://stylevistauser:a!5$7^9)(4@cluster0.6cirl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+);
 
 app.get("/", (req, res) => {
   res.send("Express App is Running");
